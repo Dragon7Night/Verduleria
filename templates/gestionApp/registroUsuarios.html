@@ -1,0 +1,62 @@
+<!doctype html>
+<!-- TEMPLATE REUTILIZABLE PARA CREAR Y EDITAR CATEGORÍAS Y PRODUCTOS -->
+{% load static %}
+<html lang="es" class="h-100" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Formulario de registro</title>
+
+    <!-- CSS STATIC -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- CSS BS5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex h-100 text-center {{colorBg}} container">
+
+    <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+        <!-- BARRA DE NAVEGACION (botones) -->
+        <div class="mb-5 shadow-lg p-3">
+            <h3 class="float-md-start mb-0">Verdulería San José</h3>
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+                <a class="nav-link fw-bold py-1 px-0" href="{% url 'homeUniversidad' %}">Home</a>
+                <a class="nav-link fw-bold py-1 px-0" href="{% url 'categoriaDataName' %}">Categorías</a>
+                <a class="nav-link fw-bold py-1 px-0" href="{% url 'productoDataName' %}">Productos</a>
+            </nav>
+        </div>
+
+        <!-- Titulo del formulario -->
+        <h1>{{txtForm}}</h1>
+
+        <div class="row justify-content-center pb-5">
+            <div class="col-12 col-md-8 col-lg-6 pb-5">
+                <div class="card shadow-lg border-radius" style="background-color: bisque !important;">
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{formKey.as_p}}
+                            <div class="d-grid mt-4">
+                                <input type="submit" class="btn btn-info" value="{{txtBtn}}">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS BS5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
