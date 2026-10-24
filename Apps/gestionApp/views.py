@@ -8,7 +8,7 @@ from django.http import HttpResponseRedirect
 
 
 def homeUni(request):
-    data = {'imgLogo':'img/logo.jpg'}
+    data = {'imgLogo':'img/logo2.jpg'}
     return render(request, 'gestionApp/index.html', data)
 
 
