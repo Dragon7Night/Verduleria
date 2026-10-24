@@ -87,7 +87,8 @@ DATABASES = {
         'PASSWORD': 'pass123',       # <--- Contraseña del compose
         #'HOST': 'localhost',   <- se cambia ya que al momento de hacer el container se referenciara directamente el container de oracle          
         'HOST': 'oracle-db-ev',           
-        'PORT': '1522',               # <-- Puerto izquierdo del compose  
+        'PORT': '1521',               # <-- Puerto derecho (Al momento de contruir la imagen del proyecto el puerto debe ser el real, ya que si bien desde a fuera se debe conectar desde el izquierdo, cuando llega el momento de estar en la misma red en los contenedores, los puertos deben estar por defecto, osea en el lado derecho)
+        # 'PORT': '1522',               # <-- Puerto izquierdo del compose  
         'OPTIONS': {
             'service_name': 'FREEPDB1', # <--- Indispensable para que reconozca al APP_USER
         },
