@@ -92,7 +92,7 @@ cd ProyectosGit
 ## 2. Clonar el repositorio
 
 ```bash
-git clone [https://github.com/Dragon7Night/Verduleria.git](https://github.com/Dragon7Night/Verduleria.git)
+git clone https://github.com/Dragon7Night/Verduleria.git
 ```
 
 ---
@@ -170,5 +170,5 @@ py manage.py runserver
 Una vez iniciado el servidor, abre tu navegador e ingresa a:
 
 ```text
-[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+http://127.0.0.1:8000/
 ```
