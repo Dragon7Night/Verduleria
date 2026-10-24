@@ -82,11 +82,11 @@ sys.modules['cx_Oracle'] = oracledb
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '', 
-        'USER': 'usuario',             # <--- Debe ser exactamente 'usuario'
-        'PASSWORD': 'MyPass123',       # <--- Contraseña del compose
+        'NAME': '',              # <-- Se deja vacio el nombre de la DB por que se define como servicio en OPTIONS
+        'USER': 'usuario',             # <--- usuario creado en Oracle y definido en el compose
+        'PASSWORD': 'pass123',       # <--- Contraseña del compose
         'HOST': 'localhost',           
-        'PORT': '1521',                
+        'PORT': '1522',               # <-- Puerto izquierdo del compose  
         'OPTIONS': {
             'service_name': 'FREEPDB1', # <--- Indispensable para que reconozca al APP_USER
         },
