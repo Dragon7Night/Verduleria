@@ -85,7 +85,8 @@ DATABASES = {
         'NAME': '',              # <-- Se deja vacio el nombre de la DB por que se define como servicio en OPTIONS
         'USER': 'usuario',             # <--- usuario creado en Oracle y definido en el compose
         'PASSWORD': 'pass123',       # <--- Contraseña del compose
-        'HOST': 'localhost',           
+        #'HOST': 'localhost',   <- se cambia ya que al momento de hacer el container se referenciara directamente el container de oracle          
+        'HOST': 'oracle-db-ev',           
         'PORT': '1522',               # <-- Puerto izquierdo del compose  
         'OPTIONS': {
             'service_name': 'FREEPDB1', # <--- Indispensable para que reconozca al APP_USER
